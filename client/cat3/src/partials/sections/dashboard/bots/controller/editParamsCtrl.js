@@ -92,7 +92,6 @@
             }
 
             $scope.getInstanceList = function() {
-                console.log($scope.IMGNewEnt);
                 if($scope.IMGNewEnt){
                     botsCreateService.getCurrentOrgInstances($scope.IMGNewEnt.org.orgid).then(function(response){
                         $scope.originalInstanceList=[];
@@ -296,7 +295,7 @@
                     }
                     $scope.botExecuteMethod(items.id,reqBody);
                 } else if (type === 'blueprints') {
-                    reqBody.blueprintIds = $scope.originalBlueprintList[0]._id;
+                    reqBody.blueprintIds = [$scope.originalBlueprintList[0]._id];
                     botsCreateService.getBlueprintDetails($scope.originalBlueprintList[0]._id).then(function(response){
                         $modal.open({
                             animate: true,
