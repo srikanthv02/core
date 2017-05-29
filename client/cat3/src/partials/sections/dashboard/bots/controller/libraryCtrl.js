@@ -49,7 +49,7 @@
                     '<img src="images/bots/serviceManagement.png" ng-show="row.entity.category==\'Service Management\'" alt="row.entity.category" title="Service Management" class="task-type-img" />'+
                     '<img src="images/bots/upgrade.png" ng-show="row.entity.category==\'Upgrade\'" alt="row.entity.category" title="Upgrade" class="task-type-img" />',cellTooltip: true},
                 { name: 'Name',displayName: 'Name',field:'name',cellTooltip: true},
-                { name: 'Type',displayName: 'Type',field:'id',cellTooltip: true},
+                { name: 'Type',displayName: 'BOT Id',field:'id',cellTooltip: true},
                 { name: 'Description',field:'desc',cellTooltip: true},
                 { name: 'Organization',field:'orgName',cellTooltip: true},
                 { name: 'Last Run',field:'lastRunTime ',cellTemplate:'<span title="{{row.entity.lastRunTime  | timestampToLocaleTime}}">{{row.entity.lastRunTime  | timestampToLocaleTime}}</span>', cellTooltip: true},
@@ -63,7 +63,7 @@
             $scope.botTimeSavedLibGridOptions = {};
             $scope.botTimeSavedLibGridOptions.columnDefs = [
                 { name: 'BOT Name',displayName: 'BOT Name',field:'name',cellTooltip: true},
-                { name: 'BOT Id',displayName: 'Type',field:'id',cellTooltip: true},
+                { name: 'BOT Id',displayName: 'BOT Id',field:'id',cellTooltip: true},
                 { name: 'Description',field:'desc',cellTooltip: true},
                 { name: 'BOT Type',displayName: 'BOT Type',field:'type',cellTooltip: true},
                 { name: 'Successful Executions',field:'successExecutionCount',cellTooltip: true},
